@@ -1,0 +1,63 @@
+<view class="page">
+
+  <view class="positionCenter width_100">
+    <view class="width_100 myFlex view_h88rpx">
+      <view class="width_90 myFlexSpace_between color_ff0000 border_bottom_167df5" bindtap="selectAddress">
+        <text class="fontSize_32">{{selectAddress_text}}</text>
+        <image src="../images/right.png" mode="widthFix" class="right_png"></image>
+      </view>
+    </view>
+  </view>
+
+  <block wx:if="{{showAddress}}">
+    <view class="overlay">
+      <view class="marginTop_50">
+        <!-- 当前选择 -->
+        <view class="width_100  myFlex bgColor_ffffff letterSpacing_5 border_bottom_ebedf0 tab_item">
+          <view class="width_90 myFlex color_ff0000">{{currentSelect}}{{currentText}}</view>
+        </view>
+        <!-- 选择器 -->
+        <view class="address_box myFlex">
+          <!-- 省 -->
+          <view>
+            <scroll-view class="scroll_view" scroll-y="{{true}}">
+              <view wx:for='{{provincesList}}' wx:key="id">
+                <view class="tab_item myFlex {{provincesTab===index ? 'select_area':''}}" data-index="{{index}}" data-linkage="{{item.linkage}}" data-id="{{item.id}}" bindtap="selectProvinces">
+                  {{item.name}}
+                </view>
+              </view>
+            </scroll-view>
+          </view>
+          <!--  -->
+          <view wx:if="{{cityList}}">
+            <scroll-view class="scroll_view" scroll-y="{{true}}" scroll-top="{{city_scroll_top}}">
+              <view wx:for='{{cityList}}' wx:key="id">
+                <view class="tab_item myFlex {{cityTab===index ? 'select_area':''}}" data-id="{{item.id}}" data-index="{{index}}" bindtap="selectCity">
+                  {{item.name}}</view>
+              </view>
+            </scroll-view>
+          </view>
+          <!--  -->
+          <view wx:if="{{countyDistrictList}}">
+            <scroll-view class="scroll_view" scroll-y="{{true}}" scroll-top="{{countyDistrictList_scroll_top}}">
+              <view wx:for='{{countyDistrictList}}' wx:key="id">
+                <view class="tab_item myFlex {{countyDistrictListTab===index ? 'select_area':''}}" data-index="{{index}}" bindtap="selectCountyDistrict" data-id="{{item.id}}">
+                  {{item.fullname}}</view>
+              </view>
+            </scroll-view>
+          </view>
+        </view>
+        <!-- 按钮 -->
+        <view class="width_100 fontSize_32 myFlex bgColor_ffffff letterSpacing_5 border_top_167df5">
+          <view class="width_90 myFlexSpace_between">
+            <view class="color_aaaaaa btnView myFlex " bindtap="selectCancel">{{selectCancel}}</view>
+            <view class="color_08c363 btnView myFlex" bindtap="selectConfirm">{{selectConfirm}}</view>
+          </view>
+        </view>
+      </view>
+      <!-- end -->
+    </view>
+  </block>
+
+
+</view>

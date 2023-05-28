@@ -1,0 +1,127 @@
+.page {
+  width: 100%;
+  height: 100%;
+}
+
+.myFlex {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.myFlexSpace_around {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.myFlexSpace_between {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* 居中 */
+.positionCenter {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.width_90 {
+  width: 90%;
+}
+
+.width_100 {
+  width: 100%;
+}
+
+.view_h88rpx {
+  height: 88rpx;
+}
+
+.right_png{
+  width: 27px;
+  height: 27px;
+}
+
+.marginTop_50 {
+  margin-top: 50rpx;
+}
+
+.border_bottom_167df5 {
+  border-bottom: 1rpx solid #167df5;
+}
+
+.border_bottom_ebedf0 {
+  border-bottom: 1px solid #ebedf0;
+}
+
+.border_top_167df5 {
+  border-top: 1px solid #167df5;
+}
+
+.bgColor_ffffff {
+  background-color: #ffffff;
+}
+
+
+.fontSize_32 {
+  font-size: 32rpx;
+}
+
+/* 字间距 */
+.letterSpacing_5 {
+  letter-spacing: 5rpx;
+}
+/* 遮罩层 */
+.overlay {
+  background-color: rgba(0, 0, 0, .3);
+  height: 100%;
+  left: 0;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 9999;
+}
+
+/* -------------------- */
+.address_box{
+  width: 100%;
+  height: 600rpx;
+  background-color: #fff;
+}
+
+.scroll_view{
+  width: 250rpx;
+  height: 580rpx;
+}
+
+.tab_item {
+  height: 80rpx;
+  font-size: 32rpx;
+}
+
+.select_area {
+  color: #167df5;
+  font-weight: bold;
+}
+
+/* 按钮 */
+.btnView {
+  height: 100rpx;
+  width: 300rpx;
+}
+
+.color_08c363 {
+  color: #08c363;
+}
+
+.color_aaaaaa {
+  color: #aaaaaa;
+}
+
+.color_ff0000 {
+  color: #ff0000;
+}
